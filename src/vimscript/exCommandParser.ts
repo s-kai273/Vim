@@ -8,6 +8,7 @@ import { CloseCommand } from '../cmd_line/commands/close';
 import { CopyCommand } from '../cmd_line/commands/copy';
 import { DeleteCommand } from '../cmd_line/commands/delete';
 import { DigraphsCommand } from '../cmd_line/commands/digraph';
+import { EchoCommand } from '../cmd_line/commands/echo';
 import { FileCommand } from '../cmd_line/commands/file';
 import { FileInfoCommand } from '../cmd_line/commands/fileInfo';
 import { GotoCommand } from '../cmd_line/commands/goto';
@@ -205,7 +206,7 @@ export const builtinExCommands: ReadonlyArray<[[string, string], ArgParser | und
   [['dsp', 'lit'], undefined],
   [['e', 'dit'], FileCommand.argParsers.edit],
   [['ea', 'rlier'], undefined],
-  [['ec', 'ho'], undefined],
+  [['ec', 'ho'], EchoCommand.argParser],
   [['echoe', 'rr'], undefined],
   [['echoh', 'l'], undefined],
   [['echom', 'sg'], undefined],
