@@ -8,15 +8,16 @@ import { CloseCommand } from '../cmd_line/commands/close';
 import { CopyCommand } from '../cmd_line/commands/copy';
 import { DeleteCommand } from '../cmd_line/commands/delete';
 import { DigraphsCommand } from '../cmd_line/commands/digraph';
+import { ExploreCommand } from '../cmd_line/commands/explore';
 import { FileCommand } from '../cmd_line/commands/file';
 import { FileInfoCommand } from '../cmd_line/commands/fileInfo';
+import { GlobalCommand } from '../cmd_line/commands/global';
 import { GotoCommand } from '../cmd_line/commands/goto';
 import { GotoLineCommand } from '../cmd_line/commands/gotoLine';
 import { HistoryCommand } from '../cmd_line/commands/history';
 import { ClearJumpsCommand, JumpsCommand } from '../cmd_line/commands/jumps';
 import { CenterCommand, LeftCommand, RightCommand } from '../cmd_line/commands/leftRightCenter';
 import { DeleteMarksCommand, MarksCommand } from '../cmd_line/commands/marks';
-import { ExploreCommand } from '../cmd_line/commands/explore';
 import { MoveCommand } from '../cmd_line/commands/move';
 import { NohlCommand } from '../cmd_line/commands/nohl';
 import { NormalCommand } from '../cmd_line/commands/normal';
@@ -242,7 +243,7 @@ export const builtinExCommands: ReadonlyArray<[[string, string], ArgParser | und
   [['foldo', 'pen'], undefined],
   [['for', ''], undefined],
   [['fu', 'nction'], undefined],
-  [['g', 'lobal'], undefined],
+  [['g', 'lobal'], GlobalCommand.argParser],
   [['go', 'to'], GotoCommand.argParser],
   [['gr', 'ep'], undefined],
   [['grepa', 'dd'], undefined],
